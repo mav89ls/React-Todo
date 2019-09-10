@@ -1,0 +1,82 @@
+.app-container {
+    border: 20px solid rgb(30, 53, 46);
+    margin: 100px;
+    padding: 25px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+}
+
+h2 {
+    /* border-left: 20px solid rgba(4, 4, 8, 0.876);
+    border-right: 20px solid rgba(4, 4, 8, 0.876); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list {
+    /* border: 1px solid red; */
+    margin-bottom: 25px;
+}
+
+.button1 {
+    background-color: rgba(71, 243, 94, 0.698);
+}
+
+.button2 {
+    background-color: rgba(165, 214, 229, 0.411);
+}
+
+.input {
+    border: 1px solid rgba(139, 139, 139, 0.466);
+}
+
+.items {
+    /* border: 1px solid red; */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    transition: all ease-in-out 2s;
+}
+
+.items {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.items:before,
+.items:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+}
+
+.items:before {
+    left: -2.5px;
+}
+
+.items:after {
+    right: 2.5px;
+    background: rgb(0, 0, 0);
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.items:hover:before {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.items:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 5s;
+}
